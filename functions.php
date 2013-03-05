@@ -12,6 +12,17 @@ function sample_viewport_meta_tag() {
 	echo '<meta name="viewport" content="width=device-width, initial-scale=1.0"/>';
 }
 
+/** Customize the credits */
+add_filter('genesis_footer_creds_text', 'eo_custom_footer_creds');
+function eo_custom_footer_creds()
+{
+echo '<div class="creds"><p>';
+echo 'Copyright &copy; ';
+echo date('Y');
+echo ' &middot; Theme by Sparxengine <a href="http://www.sparxengine.net/">Sparxengine</a> &middot ';
+echo '</p></div>';
+}
+
 // Add support for custom background
 add_theme_support( 'custom-background' );
 
